@@ -1,0 +1,16 @@
+# HTTP Requests and API interactions
+requests==2.26.0
+
+# OAuth and SAML Authentication
+Flask-OAuthlib==0.9.6
+#python3-saml==1.12.0
+
+# Database management
+SQLAlchemy==1.4.30
+alembic==1.7.4
+
+# Environment variable management
+python-dotenv==0.19.0
+
+# Additional utilities
+Flask==2.1.1  # If using Flask for creating a web server or API
