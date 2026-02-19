@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Python virtual environment
+first-app-env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
