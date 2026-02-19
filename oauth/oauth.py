@@ -229,8 +229,10 @@ def section3_refresh_token():
         print(f"No tokens found in {TOKEN_FILE}. Run section2 first.\n")
         return None
 
-    # Check if the access_token is still valid (with a 60-second buffer)
-    expires = tokens.get("expires", 0)
+    # Check if the access_token is still valid (with a 60-second buffer).
+    # NOTE: Lucid returns "expires" as a millisecond Unix timestamp — divide by
+    # 1000 to compare against time.time() which returns seconds.
+    expires = tokens.get("expires", 0) / 1000
     if time.time() < expires - 60:
         remaining = int(expires - time.time())
         print(f"Access token is still valid for {remaining} seconds. No refresh needed.\n")
