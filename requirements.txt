@@ -3,7 +3,7 @@ requests==2.26.0
 
 # OAuth and SAML Authentication
 Flask-OAuthlib==0.9.6
-#python3-saml==1.12.0
+python3-saml==1.12.0
 
 # Database management
 SQLAlchemy==1.4.30
